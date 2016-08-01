@@ -11,19 +11,21 @@
     "css:watch": "postcss -c postcss.config.json -w",
     "html:build": "pug src/*.pug -o public",
     "html:watch": "pug src/*.pug -o public -w",
-    "build": "npm run js:build & npm run css:build & npm run image:build & npm run html:build",
+    "build": "npm run js:build & npm run css:build & npm run html:build",
     "watch": "npm run js:watch & npm run css:watch & npm run html:watch",
-    "start": "npm run build && npm run bs & npm run watch"
+    "start": "npm run build & npm run bs & npm run watch"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "underscore": "^1.8.3"
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-react": "^6.11.1",
     "browser-sync": "^2.13.0",
     "postcss-cli": "^2.5.2",
     "postcss-cssnext": "^2.7.0",
@@ -34,6 +36,7 @@
     "rollup": "^0.34.1",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.0",
+    "rollup-plugin-env": "^0.21.2",
     "rollup-plugin-node-resolve": "^1.7.1",
     "rollup-plugin-replace": "^1.1.1",
     "rollup-watch": "^2.5.0",
