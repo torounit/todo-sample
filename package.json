@@ -24,6 +24,7 @@
     "react-redux": "^4.4.5",
     "rebass": "^0.3.0",
     "redux": "^3.5.2",
+    "redux-logger": "^2.6.1",
     "redux-undo": "^1.0.0-beta9",
     "underscore": "^1.8.3"
   },
