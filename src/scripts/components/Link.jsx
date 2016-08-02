@@ -3,6 +3,14 @@ const PropTypes = React.PropTypes;
 
 class Link extends React.Component {
 
+	static get propTypes() {
+		return {
+			active: PropTypes.bool.isRequired,
+			children: PropTypes.node.isRequired,
+			onClick: PropTypes.func.isRequired
+		}
+	}
+
 	render() {
 		let { active, children, onClick } = this.props;
 
@@ -23,11 +31,5 @@ class Link extends React.Component {
 	}
 }
 
-
-Link.propTypes = {
-	active: PropTypes.bool.isRequired,
-	children: PropTypes.node.isRequired,
-	onClick: PropTypes.func.isRequired
-};
 
 export default Link
