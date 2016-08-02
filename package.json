@@ -6,7 +6,7 @@
   "scripts": {
     "bs": "browser-sync start --server ./public --files 'public/**/*.*' --no-notify",
     "js:build": "browserify ./src/scripts/app.jsx -t [ babelify ] --extension=jsx -o ./public/scripts/app.js",
-    "js:watch": "watchify ./src/scripts/app.jsx -t [ babelify ] --extension=jsx -o ./public/scripts/app.js",
+    "js:watch": "watchify ./src/scripts/app.jsx -d -t [ babelify ] --extension=jsx -o ./public/scripts/app.js",
     "css:build": "postcss -c postcss.config.json",
     "css:watch": "postcss -c postcss.config.json -w",
     "html:build": "pug src/*.pug -o public",
