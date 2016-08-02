@@ -1,14 +1,17 @@
 import React from 'react'
 const PropTypes = React.PropTypes;
+//import { Button } from 'belle';
+//const Button = ReactBootstrap.Button;
+
 
 const Todo = ({ onClick, completed, text }) => (
-	<li
-		onClick={onClick}
+	<li onClick={onClick}
 		style={{
 			textDecoration: completed ? 'line-through' : 'none'
 		}}
 	>
-		{text}
+		<span>{text}</span>
+
 	</li>
 )
 
