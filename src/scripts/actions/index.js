@@ -1,3 +1,4 @@
+"use strict";
 import uuid from 'node-uuid';
 
 export const addTodo = (text) => {
@@ -5,6 +6,13 @@ export const addTodo = (text) => {
 		type: 'ADD_TODO',
 		id: uuid.v4(),
 		text
+	}
+}
+
+export const inputForm = (formText) => {
+	return {
+		type: 'INPUT_FORM',
+		formText
 	}
 }
 
