@@ -4,15 +4,18 @@ import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import UndoRedo from '../containers/UndoRedo';
+import { Container,PageHeader } from 'rebass';
 
 const App = () => (
 	<div>
 		<Header />
-		<h1>Todo</h1>
-		<AddTodo />
-		<VisibleTodoList />
-		<Footer/>
-		<UndoRedo/>
+		<Container>
+			<PageHeader heading="Todo"></PageHeader>
+			<AddTodo />
+			<Footer/>
+			<VisibleTodoList />
+			<UndoRedo/>
+		</Container>
 	</div>
 );
 
