@@ -1,4 +1,5 @@
 import React from 'react'
+import { Radio } from 'rebass';
 const PropTypes = React.PropTypes;
 
 class Link extends React.Component {
@@ -6,28 +7,39 @@ class Link extends React.Component {
 	static get propTypes() {
 		return {
 			active: PropTypes.bool.isRequired,
-			children: PropTypes.node.isRequired,
 			onClick: PropTypes.func.isRequired
 		}
 	}
 
 	render() {
-		let { active, children, onClick } = this.props;
-
-		if (active) {
-			return <span>{children}</span>
-		}
+		let { active, label, onClick, name, filter, defaultChecked } = this.props;
 
 		return (
-			<a href="#"
-			   onClick={ e => {
-				   e.preventDefault();
-				   onClick();
-			   }}
-			>
-				{children}
-			</a>
+			<Radio
+				checked={active}
+				circle
+				label={label}
+				name={filter}
+				onChange={ e => {
+					e.preventDefault();
+					onClick();
+				}}
+			/>
+
 		)
+		//
+		// return (
+		//
+		//
+		// 	<a href="#"
+		// 	   onClick={ e => {
+		// 		   e.preventDefault();
+		// 		   onClick();
+		// 	   }}
+		// 	>
+		// 		{children}
+		// 	</a>
+		// )
 	}
 }
 

@@ -1,25 +1,20 @@
 import React from 'react'
+import { Label,Divider } from 'rebass';
 import FilterLink from '../containers/FilterLink'
 
 class Footer extends React.Component {
 
 	render() {
 		return (
-			<p>
-				Show:
-				{" "}
-				<FilterLink filter="SHOW_ALL">
-					All
-				</FilterLink>
-				{", "}
-				<FilterLink filter="SHOW_ACTIVE">
-					Active
-				</FilterLink>
-				{", "}
-				<FilterLink filter="SHOW_COMPLETED">
-					Completed
-				</FilterLink>
-			</p>
+			<div>
+				<Divider />
+				<label>Filters</label>
+				<Divider />
+				<FilterLink name="filter" filter="SHOW_ALL" label="ALL" defaultChecked="true"></FilterLink>
+				<FilterLink name="filter" filter="SHOW_ACTIVE" label="Active"></FilterLink>
+				<FilterLink name="filter" filter="SHOW_COMPLETED" label="Completed"></FilterLink>
+				<Divider />
+			</div>
 		)
 	}
 }
