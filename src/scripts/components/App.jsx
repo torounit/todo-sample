@@ -13,8 +13,9 @@ const App = () => (
 			<PageHeader heading="Todo"></PageHeader>
 			<AddTodo />
 			<Footer/>
-			<VisibleTodoList />
 			<UndoRedo/>
+			<VisibleTodoList />
+
 		</Container>
 	</div>
 );

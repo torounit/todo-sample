@@ -1,17 +1,21 @@
 import React from 'react'
 import { ActionCreators as UndoActionCreators } from 'redux-undo'
 import { connect } from 'react-redux'
-import { ButtonOutline } from 'rebass';
+import { ButtonOutline, Space } from 'rebass';
 
 let UndoRedo = ({ canUndo, canRedo, onUndo, onRedo }) => (
-	<p>
+	<div>
 		<ButtonOutline onClick={onUndo} disabled={!canUndo} color={!canUndo ? 'gray' : 'blue'}>
 			Undo
 		</ButtonOutline>
+		<Space
+			auto
+			x={1}
+		/>
 		<ButtonOutline onClick={onRedo} disabled={!canRedo} color={!canRedo ? 'gray' : 'blue'}>
 			Redo
 		</ButtonOutline>
-	</p>
+	</div>
 )
 
 const mapStateToProps = (state) => {
