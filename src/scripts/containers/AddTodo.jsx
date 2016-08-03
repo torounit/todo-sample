@@ -34,9 +34,9 @@ class AddTodo extends React.Component {
 			<div>
 				<InlineForm
 					value={this.props.value}
-					buttonLabel="Go"
-					label="InlineForm"
-					name="inline_form"
+					buttonLabel="Add"
+					label="Add Todo"
+					name="add_todo"
 					onChange={ this.handleChange.bind(this) }
 					onClick={ this.handleSubmit.bind(this) }
 				/>
