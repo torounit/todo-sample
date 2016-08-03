@@ -1,18 +1,47 @@
 import React from 'react'
 const PropTypes = React.PropTypes;
-//import { Button } from 'belle';
-//const Button = ReactBootstrap.Button;
+import { Block, Button, Space } from 'rebass';
 
-
-const Todo = ({ onClick, completed, text }) => (
-	<li onClick={onClick}
-		style={{
-			textDecoration: completed ? 'line-through' : 'none'
-		}}
+const Todo = ({ onClick, onDeleteClick, completed, text }) => (
+	<Block
+		   borderLeft
+		   borderColor={completed ? 'gray' : 'blue'}
+		   px={2}
+		   style={{
+			   textDecoration: completed ? 'line-through' : 'none'
+		   }}
 	>
 		<span>{text}</span>
+		<Space
+			auto
+			x={1}
+		/>
 
-	</li>
+		<Button onClick={onClick}
+			backgroundColor={completed ? 'gray' : 'blue'}
+			color="white"
+			inverted
+			rounded
+		>
+			{completed ? 'Fixed' : 'Open'}
+		</Button>
+
+		<Space
+			auto
+			x={1}
+		/>
+
+		<Button
+			onClick={onDeleteClick}
+			backgroundColor='warning'
+			color="white"
+			inverted
+			rounded
+		>
+			Delete
+		</Button>
+
+	</Block>
 )
 
 Todo.propTypes = {
